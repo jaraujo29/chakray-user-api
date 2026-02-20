@@ -1,0 +1,185 @@
+{
+  "info": {
+    "_postman_id": "7e6ea2ed-34db-4e42-b2a9-34f702a58fed",
+    "name": "Vacante",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38261431"
+  },
+  "item": [
+    {
+      "name": "filter",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/users?filter=email+co+example",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "users"
+          ],
+          "query": [
+            {
+              "key": "sortedBy",
+              "value": "name",
+              "disabled": true
+            },
+            {
+              "key": "filter",
+              "value": "email+co+example"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "sortedBy",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/users?filter=email+co+gmail",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "users"
+          ],
+          "query": [
+            {
+              "key": "sortedBy",
+              "value": "name",
+              "disabled": true
+            },
+            {
+              "key": "filter",
+              "value": "email+co+gmail"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "crear",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Roberto Garcia\",\r\n  \"email\": \"r.garcia@provider.com\",\r\n  \"phone\": \"55 9876 5432\",\r\n  \"tax_id\": \"GARR8203157T1\",\r\n  \"password\": \"PasswordSafe123\",\r\n  \"addresses\": [\r\n    {\r\n      \"id\": 201,\r\n      \"name\": \"Personal\",\r\n      \"street\": \"Calle Pino 45\",\r\n      \"country_code\": \"MX\"\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "actualiza",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"mariana.nuevaaaaa@gmail.com\",\r\n  \"phone\": \"5500998877\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/users/0e2b0b07-e88a-4be5-8713-d065bfee1f39",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "users",
+            "0e2b0b07-e88a-4be5-8713-d065bfee1f39"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "elimina",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/users/324bea12-4dc4-4999-a220-5dafec8c168b",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "users",
+            "324bea12-4dc4-4999-a220-5dafec8c168b"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"GARR8203157T1\",\r\n  \"password\": \"PasswordSafe123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/users/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "users",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
